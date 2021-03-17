@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   
-  reponseValue = '';
+  responseValue = '';
 
   constructor(private http: HttpClient) {
 
@@ -18,9 +18,7 @@ export class AppComponent {
 
   uploadFile() {
     this.http.get('https://hao-pwa-server.herokuapp.com/').subscribe(response => {
-      console.log(response);
-      this.reponseValue = 'vo roi ban oi';
+      this.responseValue = 'hien thi len nao';
     })
-    
   }
 }
