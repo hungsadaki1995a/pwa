@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pwa';
+
+  uploadFile() {
+    console.log('vo roi')
+    
+  }
 }
