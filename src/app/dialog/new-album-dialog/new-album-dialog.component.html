@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>New Album</h1>
+<div mat-dialog-content>
+    <p>Nhập tiêu đề cho album nhé bạn :D</p>
+    <mat-form-field>
+        <mat-label>Album name</mat-label>
+        <input matInput [(ngModel)]="albumName">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button>No Thanks</button>
+    <button mat-button color="primary" (click)="onClickCreateAlbum()">OK</button>
+</div>

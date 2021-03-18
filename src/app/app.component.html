@@ -1,2 +1,22 @@
-<button (click)="uploadFile()">Upload file</button>
-<div>{{responseValue}}</div>
+<div>
+        <mat-toolbar color="primary">
+                <!--        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">-->
+                <!--                <mat-icon>menu</mat-icon>-->
+                <!--        </button>-->
+                <span>Album</span>
+                <span class="album-header"></span>
+                <button mat-icon-button class="example-icon"
+                        (click)="createNewAlbum()">
+                        <mat-icon>add</mat-icon>
+                </button>
+        </mat-toolbar>
+        <div class="album-wrapper">
+                <div *ngFor="let album of albums" class="album-item">
+                        <div class="album-item-content">
+                                <mat-card></mat-card>
+                                <div class="album-name">{{album.name}}</div>
+                        </div>
+                </div>
+        </div>
+</div>
+
