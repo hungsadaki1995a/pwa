@@ -20,13 +20,21 @@ export class AppComponent implements OnInit{
   }
   
   ngOnInit() {
-    this.http.get(environment.API_URL + '/album').subscribe(response => {
-      this.albums = response as AlbumResponseDTO[];
-    })
+    this.getAlbumList();
   }
   
   createNewAlbum() {
-    this.dialog.open(NewAlbumDialogComponent);
+    this.dialog.open(NewAlbumDialogComponent).afterClosed().subscribe(result => {
+      if (result) {
+        this.getAlbumList();
+      }
+    });
+  }
+  
+  private getAlbumList() {
+    this.http.get(environment.API_URL + '/album').subscribe(response => {
+      this.albums = response as AlbumResponseDTO[];
+    })
   }
   
 }
