@@ -1,0 +1,17 @@
+<div class="album-list-component">
+    <mat-toolbar color="primary" class="album-header">
+        <span>Album</span>
+        <button mat-icon-button class="example-icon"
+                (click)="createNewAlbum()">
+            <mat-icon>add</mat-icon>
+        </button>
+    </mat-toolbar>
+    <div class="album-wrapper">
+        <div *ngFor="let album of albums" class="album-item">
+            <div class="album-item-content">
+                <mat-card class="album-item-image" (click)="onClickNavigateToAlbumDetail(album)"></mat-card>
+                <div class="album-name">{{album.name}}</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+.album-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.album-wrapper {
+    margin: 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .album-item {
+
+        .album-item-content {
+            padding: 5px;
+
+            mat-card {
+                height: 155px;
+                width: 155px;
+            }
+        }
+    }
+
+    .album-name {
+        font-weight: bold;
+        margin-top: 0.5em;
+    }
+
+    .album-item-image {
+        cursor: pointer;
+    }
+}

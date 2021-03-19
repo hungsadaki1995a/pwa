@@ -1,0 +1,16 @@
+<div class="album-view-component">
+    <mat-toolbar color="primary" class="album-header">
+        <span>{{albumName}}</span>
+        <button mat-icon-button class="example-icon"
+                (click)="fileInput.click()">
+            <mat-icon>add</mat-icon>
+        </button>
+        <input hidden type="file" #fileInput (change)="uploadImageToAlbum($event.target)" multiple
+               [accept]="fileExtensionsValid" id="RequestUploadFileInput">
+    </mat-toolbar>
+    <div class="album-wrapper">
+        <div *ngIf="images.length === 0">
+            Chưa có hình bạn ơi, upload hình đi nào
+        </div>
+    </div>
+</div>

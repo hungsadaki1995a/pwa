@@ -20,7 +20,6 @@ import { MatCardModule } from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
-    NewAlbumDialogComponent
   ],
   imports: [
     HttpClientModule,
@@ -28,14 +27,6 @@ import { MatCardModule } from '@angular/material/card';
     AppRoutingModule,
     ServiceWorkerModule.register( 'ngsw-worker.js', { enabled: environment.production } ),
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
