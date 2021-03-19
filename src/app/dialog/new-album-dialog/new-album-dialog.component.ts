@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatDialogRef } from '@angular/material/dialog';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-new-album-dialog',
@@ -18,7 +19,7 @@ export class NewAlbumDialogComponent implements OnInit {
   }
   
   onClickCreateAlbum() {
-    this.http.post('http://localhost:3600/album', {name: this.albumName}).subscribe(response => {
+    this.http.post(environment.API_URL + '/album', {name: this.albumName}).subscribe(response => {
       this.dialogRef.close(true);
     })
   }
