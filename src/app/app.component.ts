@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatDialog } from '@angular/material/dialog';
 import { NewAlbumDialogComponent } from 'src/app/dialog/new-album-dialog/new-album-dialog.component';
-import { HOST_URL } from 'src/app/constants/config.constant';
 import { AlbumResponseDTO } from 'src/app/model/album.dto';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +20,7 @@ export class AppComponent implements OnInit{
   }
   
   ngOnInit() {
-    this.http.get(HOST_URL + '/album').subscribe(response => {
+    this.http.get(environment.API_URL + '/album').subscribe(response => {
       this.albums = response as AlbumResponseDTO[];
     })
   }
